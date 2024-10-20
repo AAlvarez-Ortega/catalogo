@@ -1,0 +1,132 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #2c2c2c; /* Fondo oscuro */
+    color: #f0f0f0; /* Texto claro */
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    text-align: center; /* Centra el texto */
+    padding: 20px 0; /* Espacio superior e inferior */
+    width: 100%; /* Asegura que el encabezado abarque todo el ancho */
+    position: relative; /* Para que el texto se posicione bien dentro del header */
+    z-index: 10; /* Asegura que el encabezado esté sobre otros elementos */
+    border-radius: 10px; /* Bordes redondeados en el encabezado */
+    margin-bottom: 20px; /* Espacio entre el encabezado y las imágenes */
+}
+
+h1 {
+    font-size: 3em; /* Tamaño de fuente más grande */
+    color: #ff7518; /* Color naranja */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para darle profundidad */
+    margin: 0; /* Elimina el margen predeterminado */
+    font-family: 'Creepster', cursive; /* Fuente temática de Halloween */
+    display: inline-block; /* Permite agregar fondo */
+}
+
+
+/* Estilo de la galería */
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.catalog-item {
+    background-color: #444; /* Fondo gris oscuro para los elementos */
+    border: 2px solid #ff7518; /* Bordes naranjas */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden;
+    text-align: center; /* Centra el texto */
+    transition: transform 0.2s, box-shadow 0.2s; /* Efecto de transición suave */
+}
+
+.catalog-item img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-bottom: 2px solid #ff7518; /* Línea decorativa en la parte inferior de la imagen */
+}
+
+.catalog-item p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ff7518; /* Color del texto */
+    text-shadow: 1px 1px 4px #000; /* Sombra para el texto */
+}
+
+/* Efecto de hover */
+.catalog-item:hover {
+    transform: scale(1.05); /* Escala ligeramente al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(255, 117, 24, 0.5); /* Sombra con color naranja */
+}
+
+/* Estilo para la imagen ampliada */
+.overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fondo oscuro con opacidad */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra verticalmente */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.full-image {
+    max-width: 90%; /* Ancho máximo de la imagen */
+    max-height: 90%; /* Altura máxima de la imagen */
+}
+/* Estilo para la imagen ampliada */
+.overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fondo oscuro con opacidad */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra verticalmente */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    transition: opacity 0.5s ease; /* Transición suave de opacidad */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+.overlay.active {
+    display: flex; /* Muestra el overlay */
+    opacity: 1; /* Hace visible el overlay */
+}
+
+.full-image {
+    max-width: 90%; /* Ancho máximo de la imagen */
+    max-height: 90%; /* Altura máxima de la imagen */
+    transform: scale(0); /* Escala inicial de la imagen */
+    transition: transform 0.5s ease; /* Transición suave para el escalado */
+}
+
+.overlay.active .full-image {
+    transform: scale(1); /* Escala a tamaño completo al activarse */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    color: #ff7518; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espacio superior e inferior */
+    border-radius: 10px; /* Bordes redondeados */
+    position: relative; /* Para asegurar que el footer esté bien posicionado */
+    margin-top: 20px; /* Espacio entre el contenido y el pie de página */
+    bottom: 0; /* Asegura que se mantenga en la parte inferior */
+    width: 100%; /* Asegura que el footer abarque todo el ancho */
+}
+
+footer p {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-family: 'Arial', sans-serif; /* Fuente del pie de página */
+}

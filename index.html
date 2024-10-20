@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Maquillaje</title>
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1>Catálogo de Maquillaje</h1>
+    </header>
+    <div class="catalog-container">
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen1.jpeg')">
+            <img src="imagenes/Imagen1.jpeg" alt="Maquillaje 1">
+            <p>Maquillaje Fantasmal</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen2.jpeg')">
+            <img src="imagenes/Imagen2.jpeg" alt="Maquillaje 2">
+            <p>Maquillaje Monja</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen3.jpeg')">
+            <img src="imagenes/Imagen3.jpeg" alt="Maquillaje 3">
+            <p>Maquillaje de Calabaza</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen4.jpeg')">
+            <img src="imagenes/Imagen4.jpeg" alt="Maquillaje 4">
+            <p>Maquillaje de Esqueleto</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen5.jpeg')">
+            <img src="imagenes/Imagen5.jpeg" alt="Maquillaje 5">
+            <p>Maquillaje de Esqueleto</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen6.jpeg')">
+            <img src="imagenes/Imagen6.jpeg" alt="Maquillaje 6">
+            <p>Maquillaje Personalizado</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen7.jpeg')">
+            <img src="imagenes/Imagen7.jpeg" alt="Maquillaje 7">
+            <p>Maquillaje de Mariposa</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen8.jpeg')">
+            <img src="imagenes/Imagen8.jpeg" alt="Maquillaje 8">
+            <p>Maquillaje Personalizado</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen9.jpeg')">
+            <img src="imagenes/Imagen9.jpeg" alt="Maquillaje 9">
+            <p>Maquillaje de Esqueleto</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen10.jpeg')">
+            <img src="imagenes/Imagen10.jpeg" alt="Maquillaje 10">
+            <p>Maquillaje Tipo Cine</p>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="hideImage()">
+        <img id="full-image" class="full-image" src="" alt="">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+ <footer>
+        <p>&copy; CopyRight 2024 Brenda Benitez/Aldo Alvarez.</p>
+</footer>
+
+
+</html>
