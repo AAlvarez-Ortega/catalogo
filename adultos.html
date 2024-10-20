@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Maquillaje</title>
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1>Catálogo de Maquillaje</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#catalogo">Catálogo</a>
+                <ul class="submenu">
+                    <li><a href="infantil.html">Infantil</a></li>
+                    <li><a href="adolecentes.html">Adolescentes</a></li>
+                    <li><a href="adultos.html">Adultos</a></li>
+                    <li><a href="tipoCine.html">Tipo Cine</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                </ul>
+            </li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="catalog-container">
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen1.jpeg')">
+            <img src="imagenes/Imagen1.jpeg" alt="Maquillaje 1">
+            <p>Maquillaje Fantasmal</p>
+        </div>
+ 
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen3.jpeg')">
+            <img src="imagenes/Imagen3.jpeg" alt="Maquillaje 3">
+            <p>Maquillaje de Calabaza</p>
+        </div>
+       
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen5.jpeg')">
+            <img src="imagenes/Imagen5.jpeg" alt="Maquillaje 5">
+            <p>Maquillaje de Esqueleto</p>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="hideImage()">
+        <img id="full-image" class="full-image" src="" alt="">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+ <footer>
+        <p>&copy; CopyRight 2024 Brenda Benitez/Aldo Alvarez.</p>
+</footer>
+
+
+</html>

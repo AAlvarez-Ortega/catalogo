@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Maquillaje</title>
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1>Catálogo de Maquillaje</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#catalogo">Catálogo</a>
+                <ul class="submenu">
+                    <li><a href="infantil.html">Infantil</a></li>
+                    <li><a href="adolecentes.html">Adolescentes</a></li>
+                    <li><a href="adultos.html">Adultos</a></li>
+                     <li><a href="tipoCine.html">TipoCine</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                </ul>
+            </li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="cobtacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="catalog-container">
+        <div class="catalog-item" onclick="showImage('imagenes/Imagen10.jpeg')">
+            <img src="imagenes/Imagen10.jpeg" alt="Maquillaje 10">
+            <p>Maquillaje Tipo Cine</p>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="hideImage()">
+        <img id="full-image" class="full-image" src="" alt="">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+ <footer>
+        <p>&copy; CopyRight 2024 Brenda Benitez/Aldo Alvarez.</p>
+</footer>
+
+
+</html>
