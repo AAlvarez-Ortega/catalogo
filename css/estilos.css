@@ -109,24 +109,152 @@ h1 {
     transform: scale(0); /* Escala inicial de la imagen */
     transition: transform 0.5s ease; /* Transición suave para el escalado */
 }
-
-.overlay.active .full-image {
-    transform: scale(1); /* Escala a tamaño completo al activarse */
-}
-
 footer {
     background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
     color: #ff7518; /* Color del texto */
     text-align: center; /* Centra el texto */
-    padding: 10px 0; /* Espacio superior e inferior */
+    padding: 15px 0; /* Espacio superior e inferior */
     border-radius: 10px; /* Bordes redondeados */
-    position: relative; /* Para asegurar que el footer esté bien posicionado */
+    position: relative; /* Asegura que el footer esté bien posicionado */
     margin-top: 20px; /* Espacio entre el contenido y el pie de página */
     bottom: 0; /* Asegura que se mantenga en la parte inferior */
     width: 100%; /* Asegura que el footer abarque todo el ancho */
+    font-family: 'Arial', sans-serif; /* Fuente del pie de página */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil para dar profundidad */
 }
 
 footer p {
     margin: 0; /* Elimina el margen predeterminado */
-    font-family: 'Arial', sans-serif; /* Fuente del pie de página */
+    font-size: 1em; /* Tamaño de fuente */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    line-height: 1.5; /* Altura de línea */
 }
+
+.overlay.active .full-image {
+    transform: scale(1); /* Escala a tamaño completo al activarse */
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para la barra de navegación */
+    padding: 10px 0; /* Espacio superior e inferior */
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin-bottom: 20px; /* Espacio entre la barra y el catálogo */
+}
+
+.navbar ul {
+    list-style: none; /* Elimina el estilo de lista predeterminado */
+    padding: 0; /* Elimina el padding de la lista */
+    text-align: center; /* Centra los elementos de la lista */
+}
+
+.navbar li {
+    display: inline; /* Muestra los elementos de la lista en línea */
+    margin: 0 15px; /* Espacio entre los enlaces */
+}
+
+.navbar a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #ff7518; /* Color del texto */
+    font-weight: bold; /* Negrita para los enlaces */
+    transition: color 0.3s; /* Efecto de transición en el color */
+}
+
+.navbar a:hover {
+    color: #ffffff; /* Cambia el color al pasar el ratón */
+}
+
+/*Sub menu*/
+.navbar {
+    position: relative; /* Para posicionar el menú desplegable relativo a la barra de navegación */
+}
+.submenu {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute; /* Posiciona el menú de manera absoluta */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con 50% de transparencia */
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin-top: 10px; /* Espacio entre el enlace del menú y el submenú */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+.submenu li {
+    display: block; /* Cada elemento del submenú ocupa una línea completa */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 10px 0; /* Espacio vertical entre opciones */
+}
+
+.submenu a {
+    padding: 10px 15px; /* Espacio alrededor del texto del submenú */
+    color: #ff7518; /* Color del texto en el submenú */
+    transition: background-color 0.3s; /* Transición para el color de fondo */
+    display: block; /* Hace que el enlace ocupe todo el espacio del elemento de lista */
+}
+.navbar li:hover .submenu {
+    display: block; /* Muestra el submenú al pasar el ratón sobre el elemento del menú */
+}
+
+.submenu a:hover {
+    background-color: rgba(255, 117, 24, 0.3); /* Cambia el fondo al pasar el ratón */
+}
+
+#descripcion {
+    text-align: center; /* Centra el texto de todo el contenido en esta sección */
+}
+
+#descripcion h2 {
+    margin-bottom: 20px; /* Espacio inferior para el título */
+}
+
+#descripcion p {
+    margin: 10px 0; /* Espacio entre párrafos */
+}
+/* Estilos para la sección de contacto */
+#contacto {
+    background-color: rgba(255, 117, 24, 0.9); /* Fondo naranja con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interior */
+    margin: 20px auto; /* Margen superior e inferior */
+    max-width: 800px; /* Ancho máximo para mantenerlo centrado */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Texto centrado */
+}
+
+#contacto h2 {
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    color: #2c2c2c; /* Color oscuro para el encabezado */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+#contacto p {
+    font-size: 1.2em; /* Tamaño de fuente adecuado */
+    margin: 10px 0; /* Espacio superior e inferior para los párrafos */
+}
+
+#contacto a {
+    color: #fff; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita para los enlaces */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+#contacto a:hover {
+    color: #ff7518; /* Cambia a color naranja al pasar el ratón */
+}
+/* Estilo para el botón de volver al inicio */
+#volver {
+    display: inline-block; /* Para que se comporte como un botón */
+    background-color: #ff7518; /* Fondo naranja */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrado de texto */
+    cursor: pointer; /* Cambia el cursor a mano */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.2em; /* Tamaño de fuente adecuado */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+    margin-top: 20px; /* Espacio superior */
+}
+
+#volver:hover {
+    background-color: #e06b1a; /* Fondo más oscuro al pasar el ratón */
+}
+
