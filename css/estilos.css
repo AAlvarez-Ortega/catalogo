@@ -3,59 +3,135 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #2c2c2c; /* Fondo oscuro */
-    color: #f0f0f0; /* Texto claro */
+    background-color: #e9e9e9; /* Fondo claro */
+    color: #2c2c2c; /* Texto oscuro */
 }
 
 /* Estilo del encabezado */
 header {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    background-color: #000000; /* Fondo negro */
     text-align: center; /* Centra el texto */
-    padding: 20px 0; /* Espacio superior e inferior */
-    width: 100%; /* Asegura que el encabezado abarque todo el ancho */
-    position: relative; /* Para que el texto se posicione bien dentro del header */
+    padding: 10px 0; /* Espacio superior e inferior reducido */
+    width: 100vw; /* Asegura que el encabezado abarque todo el ancho del viewport */
+    position: absolute; /* Se queda en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior de la página */
+    left: 0; /* Asegura que esté alineado a la izquierda */
     z-index: 10; /* Asegura que el encabezado esté sobre otros elementos */
-    border-radius: 10px; /* Bordes redondeados en el encabezado */
-    margin-bottom: 20px; /* Espacio entre el encabezado y las imágenes */
+    margin-bottom: 20px; /* Espacio inferior */
 }
 
+/* Estilo del h1 */
 h1 {
-    font-size: 3em; /* Tamaño de fuente más grande */
-    color: #ff7518; /* Color naranja */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para darle profundidad */
-    margin: 0; /* Elimina el margen predeterminado */
-    font-family: 'Creepster', cursive; /* Fuente temática de Halloween */
-    display: inline-block; /* Permite agregar fondo */
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
+    color: #FFFFFF; /* Texto blanco */
+    margin: 0; /* Elimina márgenes para ajuste limpio */
+    margin-left: 20px; /* Margen izquierdo para separación */
+    text-shadow: none; /* Elimina la sombra para un aspecto más limpio */
+    text-align: left; /* Alinea el texto a la izquierda */
+    transition: transform 0.3s; /* Transición suave para efectos de hover */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    position: relative; /* Necesario para el menú desplegable */
 }
 
+/* Contenedor del icono, alineado a la derecha */
+.icon-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Estilo del icono */
+.icon-container i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+    visibility: hidden; /* Oculto por defecto */
+    opacity: 0; /* Comienza invisible */
+    position: fixed; /* Fijo para que ocupe toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con un poco de transparencia */
+    z-index: 9999; /* Asegura que esté sobre otros elementos */
+    display: flex; /* Usa flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Acomoda las opciones en columna */
+    transform: translateY(-20px); /* Inicia un poco más arriba */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; /* Transición suave */
+}
+
+.dropdown-menu.show {
+    visibility: visible; /* Se hace visible */
+    opacity: 1; /* Totalmente visible */
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+/* Estilos para las opciones del menú */
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem; /* Tamaño grande para las opciones */
+    font-weight: bold;
+    margin: 20px 0; /* Espacio entre las opciones */
+    transition: color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    color: #ff7518; /* Cambia de color al pasar el mouse */
+}
+
+#close-menu {
+    display: inline-block; /* Asegúrate de que se comporte como un bloque en línea */
+    padding: 10px; /* Espaciado alrededor de la X */
+    font-size: 2rem; /* Tamaño del texto */
+    color: black; /* Color del texto */
+    border: 2px solid black; /* Borde negro delgado */
+    border-radius: 5px; /* Bordes redondeados opcionalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+#close-menu:hover {
+    background-color: #ff7518; /* Cambia el color de fondo al pasar el mouse */
+    color: white; /* Cambia el color del texto al pasar el mouse */
+}
 
 /* Estilo de la galería */
 .catalog-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
     gap: 20px; /* Espacio entre elementos */
+    padding: 40px 0; /* Espacio superior e inferior para la galería */
 }
 
+/* Estilo de los elementos de la galería */
 .catalog-item {
-    background-color: #444; /* Fondo gris oscuro para los elementos */
-    border: 2px solid #ff7518; /* Bordes naranjas */
-    border-radius: 10px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para los elementos */
+    border: none; /* Sin borde en la galería */
+    border-radius: 25px; /* Bordes redondeados */
     overflow: hidden;
     text-align: center; /* Centra el texto */
     transition: transform 0.2s, box-shadow 0.2s; /* Efecto de transición suave */
+    box-shadow: 0 0 10px rgba(204, 204, 204, 0.5); /* Sombra difusa */
 }
 
 .catalog-item img {
     width: 100%; /* Asegura que la imagen ocupe el ancho completo */
     height: auto; /* Mantiene la proporción de la imagen */
-    border-bottom: 2px solid #ff7518; /* Línea decorativa en la parte inferior de la imagen */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Sombra difusa en la parte inferior de la imagen */
 }
 
 .catalog-item p {
     margin: 10px 0;
     font-size: 1em;
-    color: #ff7518; /* Color del texto */
-    text-shadow: 1px 1px 4px #000; /* Sombra para el texto */
+    color: #000000; /* Color del texto negro */
 }
 
 /* Efecto de hover */
@@ -64,24 +140,6 @@ h1 {
     box-shadow: 0 4px 10px rgba(255, 117, 24, 0.5); /* Sombra con color naranja */
 }
 
-/* Estilo para la imagen ampliada */
-.overlay {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Fijo para cubrir toda la pantalla */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Fondo oscuro con opacidad */
-    justify-content: center; /* Centra el contenido */
-    align-items: center; /* Centra verticalmente */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
-}
-
-.full-image {
-    max-width: 90%; /* Ancho máximo de la imagen */
-    max-height: 90%; /* Altura máxima de la imagen */
-}
 /* Estilo para la imagen ampliada */
 .overlay {
     display: none; /* Oculto por defecto */
@@ -106,21 +164,19 @@ h1 {
 .full-image {
     max-width: 90%; /* Ancho máximo de la imagen */
     max-height: 90%; /* Altura máxima de la imagen */
-    transform: scale(0); /* Escala inicial de la imagen */
     transition: transform 0.5s ease; /* Transición suave para el escalado */
 }
+
 footer {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-    color: #ff7518; /* Color del texto */
+    background-color: #FFFFFF; /* Fondo claro */
+    color: #000000; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 15px 0; /* Espacio superior e inferior */
     border-radius: 10px; /* Bordes redondeados */
     position: relative; /* Asegura que el footer esté bien posicionado */
     margin-top: 20px; /* Espacio entre el contenido y el pie de página */
-    bottom: 0; /* Asegura que se mantenga en la parte inferior */
     width: 100%; /* Asegura que el footer abarque todo el ancho */
     font-family: 'Arial', sans-serif; /* Fuente del pie de página */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil para dar profundidad */
 }
 
 footer p {
@@ -128,133 +184,40 @@ footer p {
     font-size: 1em; /* Tamaño de fuente */
     letter-spacing: 1px; /* Espaciado entre letras */
     line-height: 1.5; /* Altura de línea */
+    font-weight: bold; /* Texto en negrita */
 }
 
-.overlay.active .full-image {
-    transform: scale(1); /* Escala a tamaño completo al activarse */
-}
-.navbar {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para la barra de navegación */
-    padding: 10px 0; /* Espacio superior e inferior */
-    border-radius: 10px; /* Esquinas redondeadas */
-    margin-bottom: 20px; /* Espacio entre la barra y el catálogo */
-}
-
-.navbar ul {
-    list-style: none; /* Elimina el estilo de lista predeterminado */
-    padding: 0; /* Elimina el padding de la lista */
-    text-align: center; /* Centra los elementos de la lista */
+/* Estilos para la sección de contacto */
+#contacto {
+    background-color: white; /* Fondo blanco */
+    color: black; /* Texto negro */
+    padding: 30px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 40px; /* Ajusta este valor para dejar más espacio superior */
+    text-align: center; /* Centra el texto */
 }
 
-.navbar li {
-    display: inline; /* Muestra los elementos de la lista en línea */
-    margin: 0 15px; /* Espacio entre los enlaces */
+#contacto h2 {
+    margin-bottom: 20px; /* Espacio inferior */
 }
 
-.navbar a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #ff7518; /* Color del texto */
-    font-weight: bold; /* Negrita para los enlaces */
-    transition: color 0.3s; /* Efecto de transición en el color */
+#contacto a {
+    color: black; /* Color de los enlaces */
+    text-decoration: underline; /* Subrayado para los enlaces */
 }
 
-.navbar a:hover {
-    color: #ffffff; /* Cambia el color al pasar el ratón */
-}
-
-/*Sub menu*/
-.navbar {
-    position: relative; /* Para posicionar el menú desplegable relativo a la barra de navegación */
-}
-.submenu {
-    display: none; /* Oculta el menú por defecto */
-    position: absolute; /* Posiciona el menú de manera absoluta */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con 50% de transparencia */
-    border-radius: 5px; /* Esquinas redondeadas */
-    margin-top: 10px; /* Espacio entre el enlace del menú y el submenú */
-    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
-}
-
-.submenu li {
-    display: block; /* Cada elemento del submenú ocupa una línea completa */
-    text-align: left; /* Alinea el texto a la izquierda */
-    padding: 10px 0; /* Espacio vertical entre opciones */
-}
-
-.submenu a {
-    padding: 10px 15px; /* Espacio alrededor del texto del submenú */
-    color: #ff7518; /* Color del texto en el submenú */
-    transition: background-color 0.3s; /* Transición para el color de fondo */
-    display: block; /* Hace que el enlace ocupe todo el espacio del elemento de lista */
-}
-.navbar li:hover .submenu {
-    display: block; /* Muestra el submenú al pasar el ratón sobre el elemento del menú */
-}
-
-.submenu a:hover {
-    background-color: rgba(255, 117, 24, 0.3); /* Cambia el fondo al pasar el ratón */
-}
-
+/* Estilos para la sección "Nosotros" */
 #descripcion {
     text-align: center; /* Centra el texto de todo el contenido en esta sección */
 }
 
 #descripcion h2 {
     margin-bottom: 20px; /* Espacio inferior para el título */
+    margin-top: 50px;
 }
 
 #descripcion p {
     margin: 10px 0; /* Espacio entre párrafos */
 }
-/* Estilos para la sección de contacto */
-#contacto {
-    background-color: rgba(255, 117, 24, 0.9); /* Fondo naranja con opacidad */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Espacio interior */
-    margin: 20px auto; /* Margen superior e inferior */
-    max-width: 800px; /* Ancho máximo para mantenerlo centrado */
-    color: #fff; /* Texto blanco */
-    text-align: center; /* Texto centrado */
-}
 
-#contacto h2 {
-    font-size: 2.5em; /* Tamaño de fuente grande */
-    color: #2c2c2c; /* Color oscuro para el encabezado */
-    margin-bottom: 15px; /* Espacio inferior */
-}
-
-#contacto p {
-    font-size: 1.2em; /* Tamaño de fuente adecuado */
-    margin: 10px 0; /* Espacio superior e inferior para los párrafos */
-}
-
-#contacto a {
-    color: #fff; /* Color de los enlaces */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: bold; /* Negrita para los enlaces */
-    transition: color 0.3s; /* Transición suave para el color */
-}
-
-#contacto a:hover {
-    color: #ff7518; /* Cambia a color naranja al pasar el ratón */
-}
-/* Estilo para el botón de volver al inicio */
-#volver {
-    display: inline-block; /* Para que se comporte como un botón */
-    background-color: #ff7518; /* Fondo naranja */
-    color: #fff; /* Texto blanco */
-    padding: 10px 20px; /* Espaciado dentro del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center; /* Centrado de texto */
-    cursor: pointer; /* Cambia el cursor a mano */
-    text-decoration: none; /* Sin subrayado */
-    font-size: 1.2em; /* Tamaño de fuente adecuado */
-    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
-    margin-top: 20px; /* Espacio superior */
-}
-
-#volver:hover {
-    background-color: #e06b1a; /* Fondo más oscuro al pasar el ratón */
-}
 
