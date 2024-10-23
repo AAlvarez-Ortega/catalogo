@@ -1,0 +1,308 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e9e9e9; /* Fondo blanco saturado */
+    color: #2c2c2c; /* Texto oscuro */
+}
+
+
+/* Estilo del encabezado */
+
+header {
+    background-color: #000000; /* Fondo negro */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espacio superior e inferior reducido */
+    width: 100vw; /* Asegura que el encabezado abarque todo el ancho del viewport */
+    position: absolute; /* Cambiado a position absolute para que se quede en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior de la página */
+    left: 0; /* Asegura que esté alineado a la izquierda */
+    z-index: 10; /* Asegura que el encabezado esté sobre otros elementos */
+    border-radius: 0; /* Sin bordes redondeados para que se ajuste al borde */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo del h1 */
+h1 {
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
+    color: #FFFFFF; /* Texto blanco */
+    margin: 0; /* Elimina márgenes para ajuste limpio */
+    margin-left: 20px; /* Margen izquierdo para separación */
+    text-shadow: none; /* Elimina la sombra para un aspecto más limpio */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-family: 'Arial', sans-serif; /* Tipo de letra limpio y moderno */
+    transition: transform 0.3s; /* Transición suave para efectos de hover */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    position: relative; /* Necesario para el menú desplegable */
+}
+
+/* Contenedor del icono, alineado a la derecha */
+.icon-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Estilo del icono */
+.icon-container i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+    visibility: hidden; /* Oculto por defecto, pero ocupa espacio */
+    opacity: 0; /* Comienza invisible */
+    position: fixed; /* Fijo para que ocupe toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con un poco de transparencia */
+    z-index: 9999; /* Asegura que esté sobre otros elementos */
+    display: flex; /* Usa flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Acomoda las opciones en columna */
+    transform: translateY(-20px); /* Inicia un poco más arriba */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; /* Transición suave */
+}
+
+.dropdown-menu.show {
+    visibility: visible; /* Se hace visible */
+    opacity: 1; /* Totalmente visible */
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+/* Estilos para las opciones del menú */
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem; /* Tamaño grande para las opciones */
+    font-weight: bold;
+    margin: 20px 0; /* Espacio entre las opciones */
+    transition: color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    color: #ff7518; /* Cambia de color al pasar el mouse */
+}
+#close-menu {
+    display: inline-block; /* Asegúrate de que se comporte como un bloque en línea */
+    padding: 10px; /* Espaciado alrededor de la X */
+    font-size: 2rem; /* Tamaño del texto */
+    color: black; /* Color del texto */
+    border: 2px solid black; /* Borde negro delgado */
+    border-radius: 5px; /* Bordes redondeados opcionalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+#close-menu:hover {
+    background-color: #ff7518; /* Cambia el color de fondo al pasar el mouse */
+    color: white; /* Cambia el color del texto al pasar el mouse */
+}
+
+
+
+
+
+
+
+
+/* Estilo de la galería */
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.catalog-item {
+    background-color: #444; /* Fondo gris oscuro para los elementos */
+    border: 2px solid transparent; /* Borde transparente para mantener el espacio */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden;
+    text-align: center; /* Centra el texto */
+    transition: transform 0.2s, box-shadow 0.2s; /* Efecto de transición suave */
+    box-shadow: 0 0 10px rgba(255, 117, 24, 0.5); /* Sombra difusa */
+}
+
+.catalog-item img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-bottom: 2px solid #ff7518; /* Línea decorativa en la parte inferior de la imagen */
+}
+
+.catalog-item p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ff7518; /* Color del texto */
+    text-shadow: 1px 1px 4px #000; /* Sombra para el texto */
+}
+
+/* Efecto de hover */
+.catalog-item:hover {
+    transform: scale(1.05); /* Escala ligeramente al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(255, 117, 24, 0.5); /* Sombra con color naranja */
+}
+
+/* Estilo para la imagen ampliada */
+.overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fondo oscuro con opacidad */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra verticalmente */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    transition: opacity 0.5s ease; /* Transición suave de opacidad */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+.overlay.active {
+    display: flex; /* Muestra el overlay */
+    opacity: 1; /* Hace visible el overlay */
+}
+
+.full-image {
+    max-width: 90%; /* Ancho máximo de la imagen */
+    max-height: 90%; /* Altura máxima de la imagen */
+    transform: scale(0); /* Escala inicial de la imagen */
+    transition: transform 0.5s ease; /* Transición suave para el escalado */
+}
+
+footer {
+    background-color: #FFFFFF; /* Fondo claro */
+    color: #000000; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 15px 0; /* Espacio superior e inferior */
+    border-radius: 10px; /* Bordes redondeados */
+    position: relative; /* Asegura que el footer esté bien posicionado */
+    margin-top: 20px; /* Espacio entre el contenido y el pie de página */
+    bottom: 0; /* Asegura que se mantenga en la parte inferior */
+    width: 100%; /* Asegura que el footer abarque todo el ancho */
+    font-family: 'Arial', sans-serif; /* Fuente del pie de página */
+}
+
+footer p {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 1em; /* Tamaño de fuente */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    line-height: 1.5; /* Altura de línea */
+    font-weight: bold; /* Texto en negrita */
+}
+
+
+.overlay.active .full-image {
+    transform: scale(1); /* Escala a tamaño completo al activarse */
+}
+
+#descripcion {
+    text-align: center; /* Centra el texto de todo el contenido en esta sección */
+}
+
+#descripcion h2 {
+    margin-bottom: 20px; /* Espacio inferior para el título */
+    margin-top: 50px;
+}
+
+#descripcion p {
+    margin: 10px 0; /* Espacio entre párrafos */
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    background-color: rgba(255, 117, 24, 0.9); /* Fondo naranja con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espacio superior */
+}
+
+#contacto h3 {
+    margin-bottom: 10px; /* Espacio inferior para el título */
+}
+
+#contacto p {
+    margin: 5px 0; /* Espacio entre párrafos */
+}
+
+/* Estilo para el enlace de correo */
+#contacto a {
+    color: #ffffff; /* Color blanco para el enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita para el enlace */
+}
+
+/* Carrusel */
+.carousel-container {
+    overflow-x: scroll; /* Habilita el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
+    padding-bottom: 20px; /* Espacio inferior */
+    scrollbar-width: none; /* Oculta el scrollbar en navegadores compatibles */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Oculta el scrollbar en navegadores WebKit */
+}
+
+.carousel {
+    display: flex; /* Usa flexbox para organizar los items horizontalmente */
+    gap: 15px; /* Margen de 50px entre cada imagen */
+    margin-top: 15px;
+}
+
+.carousel-item {
+    display: inline-block; /* Asegura que las imágenes estén en línea */
+    text-align: center; /* Centra el texto */
+    transition: transform 0.2s ease-in-out; /* Transición suave al hover */
+}
+
+.carousel-item img {
+    width: 250px; /* Aumenta el ancho de las imágenes en un 25% */
+    height: auto;
+    border: 2px solid transparent; /* Borde transparente para mantener espacio */
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra difusa */
+    transition: transform 0.3s;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Botón infantil */
+.button-container {
+    margin: 50px 0 10px 0; /* Margen superior de 25px, margen inferior de 10px */
+    text-align: left; /* Alinea el botón a la izquierda */
+}
+
+
+.infantil-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 20px; /* Espacio específico en la parte inferior del botón */
+    align-self: flex-end; /* Alinea el botón a la izquierda dentro del contenedor */
+}
+
+.infantil-button:hover {
+    background-color: black;
+    color: white;
+}
+
