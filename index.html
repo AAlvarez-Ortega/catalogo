@@ -1,78 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catálogo Maquillaje Valdez</title>
+        <link href="css/estiloInicio.css" rel="stylesheet" type="text/css" />
+        <!-- Enlace a Font Awesome para los íconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Maquillaje</title>
-    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
-</head>
 
 <body>
     <header>
-        <h1>Catálogo de Maquillaje</h1>
+        <h1>
+            MV
+            <span class="icon-container">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </span>
+            <div class="dropdown-menu" id="dropdown">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="cobtacto.html">Contactos</a>
+                <a href="#" id="close-menu"> X </a> 
+            </div>
+        </h1>
     </header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#catalogo">Catálogo</a>
-                <ul class="submenu">
-                    <li><a href="infantil.html">Infantil</a></li>
-                    <li><a href="adolecentes.html">Adolescentes</a></li>
-                    <li><a href="adultos.html">Adultos</a></li>
-                     <li><a href="tipoCine.html">TipoCine</a></li>
-                    <li><a href="index.html">Inicio</a></li>
-                </ul>
-            </li>
-            <li><a href="nosotros.html">Sobre Nosotros</a></li>
-            <li><a href="cobtacto.html">Contacto</a></li>
-        </ul>
-    </nav>
 
+    
+    <!-- Categoría Adultos -->
+    <div class="button-container">
+        <a href="adultos.html" class="infantil-button">Adulto ver+</a>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen1.jpeg')">
+                <img src="imagenes/Imagen1.jpeg" alt="Maquillaje 1">
+                <p>Maquillaje Fantasmal</p>
+            </div>
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen3.jpeg')">
+                <img src="imagenes/Imagen3.jpeg" alt="Maquillaje 3">
+                <p>Maquillaje de Calabaza</p>
+            </div>
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen5.jpeg')">
+                <img src="imagenes/Imagen5.jpeg" alt="Maquillaje 5">
+                <p>Maquillaje de Esqueleto</p>
+            </div>
+        </div>
+    </div>
 
-    <div class="catalog-container">
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen1.jpeg')">
-            <img src="imagenes/Imagen1.jpeg" alt="Maquillaje 1">
-            <p>Maquillaje Fantasmal</p>
+    <!-- Categoría Infantil -->
+    <div class="button-container">
+        <a href="infantil.html" class="infantil-button">Infantil ver+</a>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen2.jpeg')">
+                <img src="imagenes/Imagen2.jpeg" alt="Maquillaje 2">
+                <p>Maquillaje Monja</p>
+            </div>
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen4.jpeg')">
+                <img src="imagenes/Imagen4.jpeg" alt="Maquillaje 4">
+                <p>Maquillaje de Esqueleto</p>
+            </div>
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen6.jpeg')">
+                <img src="imagenes/Imagen6.jpeg" alt="Maquillaje 6">
+                <p>Maquillaje Personalizado</p>
+            </div>
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen7.jpeg')">
+                <img src="imagenes/Imagen7.jpeg" alt="Maquillaje 7">
+                <p>Maquillaje de Mariposa</p>
+            </div>
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen8.jpeg')">
+                <img src="imagenes/Imagen8.jpeg" alt="Maquillaje 8">
+                <p>Maquillaje Personalizado</p>
+            </div>
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen9.jpeg')">
+                <img src="imagenes/Imagen9.jpeg" alt="Maquillaje 9">
+                <p>Maquillaje de Esqueleto</p>
+            </div>
         </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen2.jpeg')">
-            <img src="imagenes/Imagen2.jpeg" alt="Maquillaje 2">
-            <p>Maquillaje Monja</p>
+    </div>
+
+    <!-- Categoría Adolescentes -->
+    <div class="button-container">
+        <a href="adolecentes.html" class="infantil-button">Adolecente ver+</a>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen11.jpg')">
+                <img src="imagenes/Imagen11.jpg" alt="Maquillaje 11">
+                <p>Muñeca de trapo</p>
+            </div>
         </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen3.jpeg')">
-            <img src="imagenes/Imagen3.jpeg" alt="Maquillaje 3">
-            <p>Maquillaje de Calabaza</p>
-        </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen4.jpeg')">
-            <img src="imagenes/Imagen4.jpeg" alt="Maquillaje 4">
-            <p>Maquillaje de Esqueleto</p>
-        </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen5.jpeg')">
-            <img src="imagenes/Imagen5.jpeg" alt="Maquillaje 5">
-            <p>Maquillaje de Esqueleto</p>
-        </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen6.jpeg')">
-            <img src="imagenes/Imagen6.jpeg" alt="Maquillaje 6">
-            <p>Maquillaje Personalizado</p>
-        </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen7.jpeg')">
-            <img src="imagenes/Imagen7.jpeg" alt="Maquillaje 7">
-            <p>Maquillaje de Mariposa</p>
-        </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen8.jpeg')">
-            <img src="imagenes/Imagen8.jpeg" alt="Maquillaje 8">
-            <p>Maquillaje Personalizado</p>
-        </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen9.jpeg')">
-            <img src="imagenes/Imagen9.jpeg" alt="Maquillaje 9">
-            <p>Maquillaje de Esqueleto</p>
-        </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen11.jpg')">
-            <img src="imagenes/Imagen11.jpg" alt="Maquillaje 11">
-            <p>Muñeca de trapo</p>
-        </div>
-        <div class="catalog-item" onclick="showImage('imagenes/Imagen10.jpeg')">
-            <img src="imagenes/Imagen10.jpeg" alt="Maquillaje 10">
-            <p>Maquillaje Tipo Cine</p>
+    </div>
+
+    <!-- Categoría Tipo Cine -->
+    <div class="button-container">
+        <a href="tipoCine.html" class="infantil-button">Tipo Cine ver+</a>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item" onclick="showImage('imagenes/Imagen10.jpeg')">
+                <img src="imagenes/Imagen10.jpeg" alt="Maquillaje 10">
+                <p>Maquillaje Tipo Cine</p>
+            </div>
         </div>
     </div>
 
@@ -81,11 +112,10 @@
     </div>
 
     <script src="js/script.js"></script>
-</body>
 
- <footer>
+    <footer>
         <p>&copy; CopyRight 2024 Brenda Benitez/Aldo Alvarez.</p>
-</footer>
-
+    </footer>
+</body>
 
 </html>
