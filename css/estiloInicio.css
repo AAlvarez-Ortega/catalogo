@@ -281,7 +281,7 @@ footer p {
 
 /* Botón infantil */
 .button-container {
-    margin: 50px 0 10px 0; /* Margen superior de 25px, margen inferior de 10px */
+    margin: 20px 0 10px 0; /* Margen superior de 25px, margen inferior de 10px */
     text-align: left; /* Alinea el botón a la izquierda */
 }
 
@@ -297,7 +297,7 @@ footer p {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-bottom: 20px; /* Espacio específico en la parte inferior del botón */
+    margin-top: 10px;
     align-self: flex-end; /* Alinea el botón a la izquierda dentro del contenedor */
 }
 
@@ -305,4 +305,22 @@ footer p {
     background-color: black;
     color: white;
 }
+
+/* CSS minimalista para los títulos de sección */
+.section-title {
+    font-family:  sans-serif;
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #333;
+    text-align: left;
+    margin-top: 40px;
+    
+}
+
+.section-title span.bold {
+    font-weight: bold;
+    color: #111;
+}
+
+
 
