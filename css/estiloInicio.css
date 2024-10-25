@@ -108,13 +108,6 @@ h1 {
     color: white; /* Cambia el color del texto al pasar el mouse */
 }
 
-
-
-
-
-
-
-
 /* Estilo de la galería */
 .catalog-container {
     display: grid;
@@ -122,34 +115,6 @@ h1 {
     gap: 20px; /* Espacio entre elementos */
 }
 
-.catalog-item {
-    background-color: #444; /* Fondo gris oscuro para los elementos */
-    border: 2px solid transparent; /* Borde transparente para mantener el espacio */
-    border-radius: 10px; /* Bordes redondeados */
-    overflow: hidden;
-    text-align: center; /* Centra el texto */
-    transition: transform 0.2s, box-shadow 0.2s; /* Efecto de transición suave */
-    box-shadow: 0 0 10px rgba(255, 117, 24, 0.5); /* Sombra difusa */
-}
-
-.catalog-item img {
-    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-bottom: 2px solid #ff7518; /* Línea decorativa en la parte inferior de la imagen */
-}
-
-.catalog-item p {
-    margin: 10px 0;
-    font-size: 1em;
-    color: #ff7518; /* Color del texto */
-    text-shadow: 1px 1px 4px #000; /* Sombra para el texto */
-}
-
-/* Efecto de hover */
-.catalog-item:hover {
-    transform: scale(1.05); /* Escala ligeramente al pasar el mouse */
-    box-shadow: 0 4px 10px rgba(255, 117, 24, 0.5); /* Sombra con color naranja */
-}
 
 /* Estilo para la imagen ampliada */
 .overlay {
@@ -205,42 +170,6 @@ footer p {
     transform: scale(1); /* Escala a tamaño completo al activarse */
 }
 
-#descripcion {
-    text-align: center; /* Centra el texto de todo el contenido en esta sección */
-}
-
-#descripcion h2 {
-    margin-bottom: 20px; /* Espacio inferior para el título */
-    margin-top: 50px;
-}
-
-#descripcion p {
-    margin: 10px 0; /* Espacio entre párrafos */
-}
-
-/* Estilos para la sección de contacto */
-#contacto {
-    background-color: rgba(255, 117, 24, 0.9); /* Fondo naranja con opacidad */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Espacio interno */
-    text-align: center; /* Centra el texto */
-    margin-top: 20px; /* Espacio superior */
-}
-
-#contacto h3 {
-    margin-bottom: 10px; /* Espacio inferior para el título */
-}
-
-#contacto p {
-    margin: 5px 0; /* Espacio entre párrafos */
-}
-
-/* Estilo para el enlace de correo */
-#contacto a {
-    color: #ffffff; /* Color blanco para el enlace */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: bold; /* Negrita para el enlace */
-}
 
 /* Carrusel */
 .carousel-container {
@@ -321,6 +250,3 @@ footer p {
     font-weight: bold;
     color: #111;
 }
-
-
-
