@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catálogo de Maquillaje</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+    </head>
+
+
+<body>
+    <header>
+        <h1>
+           Catalogo
+            <span class="icon-container">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </span>
+            <div class="dropdown-menu" id="dropdown">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="accesorios.html">Accesorio</a>
+                <a href="cobtacto.html">Contactos</a>
+                <a href="#" id="close-menu"> X </a> 
+            </div>
+        </h1>
+    </header>
+
+    <div id="catalogoInfantil" class="catalog-container">
+        <div class="catalog-item" onclick="showImage('imagenes/acc1.jpeg')">
+            <img src="imagenes/acc1.jpeg" alt="Accesorio 1">
+            <p>Diadema Girasoles</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/acc2.jpeg')">
+            <img src="imagenes/acc2.jpeg" alt="Accesorio 2">
+            <p>Diadema mariposas</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/acc3.jpeg')">
+            <img src="imagenes/acc3.jpeg" alt="Accesorio 3">
+            <p>Diadema rosas</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/acc4.jpeg')">
+            <img src="imagenes/acc4.jpeg" alt="Accesorio 4">
+            <p>Diadema rosas rojas</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/acc5.jpeg')">
+            <img src="imagenes/acc5.jpeg" alt="Accesorio 5">
+            <p>Varios tipos</p>
+        </div>
+        <div class="catalog-item" onclick="showImage('imagenes/acc6.jpeg')">
+            <img src="imagenes/acc6.jpeg" alt="Accesorio 5">
+            <p>Piedaras de decoracion</p>
+        </div>
+    </div>
+
+
+
+    <div id="overlay" class="overlay" onclick="hideImage()">
+        <img id="full-image" class="full-image" src="" alt="">
+    </div>
+
+    <footer>
+        <p>&copy; CopyRight 2024 Brenda Benitez/Aldo Alvarez.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
